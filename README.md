@@ -16,7 +16,7 @@ The page also displays a text result, indicating:
 "Player 2 Wins!" if the second die's value is higher.
 "Draw!" if both dice have the same value.
 "Replay":
-To "play" again, the user simply refreshes the web page or pressing the roll dice button, triggering a new dice roll.
+To "play" again, the user simply refreshes the web page or presses the roll dice button, triggering a new dice roll.
 Essentially:
 
 It's a visual representation of a single dice roll comparison, designed to teach basic JavaScript concepts like random number generation and DOM manipulation.
