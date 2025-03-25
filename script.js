@@ -1,13 +1,15 @@
-let leftFlag = document.querySelector("#left-flag")
-let rightFlag = document.querySelector("#right-flag")
-let leftDiceImage = document.querySelector("#left-dice-image")
-let rightDiceImage = document.querySelector("#right-dice-image")
-let winnerTitle = document.querySelector("#winner-title")
+const leftFlag = document.querySelector("#left-flag")
+const rightFlag = document.querySelector("#right-flag")
+const leftDiceImage = document.querySelector("#left-dice-image")
+const rightDiceImage = document.querySelector("#right-dice-image")
+const winnerTitle = document.querySelector("#winner-title")
+const rollDiceButton = document.querySelector("#roll-dice-btn")
+ 
+
 
 function rollDices() {
 	let player1Roll = Math.floor(Math.random() * 6 + 1)
 	let player2Roll = Math.floor(Math.random() * 6 + 1)
-	console.log("hola")
 	if (player1Roll > player2Roll) {
 		winnerTitle.textContent = "Player 1 Wings"
 		leftDiceImage.setAttribute("src", "./images/dice" + player1Roll + ".png")
@@ -28,3 +30,10 @@ function rollDices() {
 }
 
 document.onload = rollDices()
+rollDiceButton.addEventListener('click', rollDices)
+rollDiceButton.addEventListener('click', ()=>{
+	rollDiceButton.style.transform = 'scale(1.1)'
+	setTimeout(() => {
+		rollDiceButton.style.transform = 'scale(1)';
+	  }, 200)
+})
