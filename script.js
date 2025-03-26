@@ -8,6 +8,10 @@ const rollDiceButton = document.querySelector("#roll-dice-btn")
 
 
 function rollDices() {
+
+	leftFlag.classList.remove("left-flag")
+    rightFlag.classList.remove("left-flag")
+	
 	let player1Roll = Math.floor(Math.random() * 6 + 1)
 	let player2Roll = Math.floor(Math.random() * 6 + 1)
 	if (player1Roll > player2Roll) {
